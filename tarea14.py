@@ -13,13 +13,14 @@ def seleccionar3(event):
     print("Ha seleccionado el boton 3")
     
 def reset(event):
-    print("Reiniciado")
-    return window
+    print("Reiniciado!, Seleccione una opcion:")
+    selected.set(None)
     
 label = tkinter.Label(window, text="Seleccione una opcion:")
 label.grid(column=0, row=0)
 
 selected = tkinter.StringVar()
+selected.set(None)
 
 boton1 = ttk.Radiobutton(window, text="B1", value= '1' ,variable= selected)
 boton2 = ttk.Radiobutton(window, text="B2", value= '2' ,variable= selected)
